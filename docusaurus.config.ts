@@ -1,66 +1,64 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-const GITHUB_BASE_URL = 'https://github.com/jberns/poke-docs';
+const GITHUB_BASE_URL = "https://github.com/jberns/poke-docs";
 
 const config: Config = {
-  title: 'JoshBeeTCG',
-  tagline: 'Bee Centered',
-  favicon: 'img/favicon.png',
+  title: "JoshBeeTCG",
+  tagline: "Bee Centered",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: 'https://docs.joshbeetcg.com',
+  url: "https://docs.joshbeetcg.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   // organizationName: 'facebook', // Usually your GitHub org/user name.
   // projectName: 'docusaurus', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            `${GITHUB_BASE_URL}/tree/main`,
+          editUrl: `${GITHUB_BASE_URL}/tree/main`,
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            `${GITHUB_BASE_URL}/tree/main/`,
+          editUrl: `${GITHUB_BASE_URL}/tree/main/`,
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -68,37 +66,40 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/bee-centered-social-card.png',
+    image: "img/bee-centered-social-card.png",
     navbar: {
-      title: 'JoshBeeTCG',
+      title: "JoshBeeTCG",
       logo: {
-        alt: 'JoshBeeTCG Logo',
-        src: 'img/favicon.png',
+        alt: "JoshBeeTCG Logo",
+        src: "img/favicon.png",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Docs",
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: GITHUB_BASE_URL,
-          label: 'GitHub',
-          position: 'right',
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/getting-started',
+              label: "Getting Started",
+              to: "/docs/getting-started",
+            },
+            {
+              label: "Benchmarks & Examples",
+              to: "/docs/category/benchmarks-and-examples",
             },
           ],
         },
@@ -120,15 +121,11 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "GitHub",
+              href: GITHUB_BASE_URL,
             },
           ],
         },
