@@ -99,7 +99,7 @@ const config: Config = {
             },
             {
               label: "Benchmarks & Examples",
-              to: "/docs/category/benchmarks-and-examples",
+              to: "/docs/benchmarks",
             },
           ],
         },
